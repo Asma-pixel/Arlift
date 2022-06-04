@@ -1,0 +1,164 @@
+@import './colors/colors';
+@font-face {
+    font-family: "SansProRegular";
+    src: url('../fonts/PFBagueSansPro.ttf');
+}
+@font-face {
+    font-family: "SansProBold";
+    src: url('../fonts/PFBagueSansPro-Bold.ttf');
+}
+@font-face {
+    font-family: "Becubick";
+    src: url('../fonts/becubick.ttf');
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0 ;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+	line-height: 1.5;
+	min-height: 300vh;
+	position: relative;
+    color: black;
+    background-color: rgb(196, 188, 188);
+    font: normal SansProRegular, sans-serif;
+    color: $font-default;
+}
+.body-wrapper {
+    width: 70%;
+    background-color: white;
+}
+.header-outer {
+	height: 100px;
+	position: sticky;
+    justify-content: center;
+	top: -50px;
+	display: flex;
+	align-items: center;
+    background: $white;
+    z-index: 2000;
+    
+   .header-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+    width: 100%;
+    height: 50px;
+   
+	position: sticky;
+	top: 0;	
+    img {
+        height: 40px;
+        width: 130px;
+    }
+   }
+   border-bottom: 1px solid gray;
+   box-shadow:  0px 1px 3px 1px rgba(0, 0, 0, .2);
+   ul {
+       display: flex;
+       
+       a {
+       
+        text-decoration: none;
+        font-size: 1.25rem;
+        color: $font-default;
+        margin-left: 1.75rem;
+        position: relative;
+        font-weight: 500;       
+       }
+       a:last-child {
+           margin-right: 0;
+       }
+   }
+}
+.main {
+    height: 100vh;
+}
+section {
+    display: flex;
+
+    width: 100%;
+    
+    min-height: 150px;
+   
+    z-index: 1000;
+
+    font-family: SansProRegular, sans-serif;
+    h2 {
+        margin-bottom: 24px ;
+    }
+}
+.display-column {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px;
+    font-size: 1.2rem;
+   
+}
+.first-section {
+    height: 250px;
+    position: relative;
+    background-image: url('../img/wpsm.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+  .wrapper-first-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    background-color: rgba(0,0,0,0.5);
+    font-style: oblique;
+    color: $white;
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+  }
+}
+.requirements {
+    p {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+}
+
+.section-with-list {
+    ol {
+        width: 70%;
+        
+        
+    }
+    li {
+        margin-left: 30px;
+    
+    }
+
+}
+.tasks {
+    background-color: $second-main;
+
+    
+}
+.offer {
+    background-color:  $white;
+}
