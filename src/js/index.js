@@ -1,3 +1,2 @@
-a = 1;
-a++;
-console.log(a);
+import sliderInit from "./slider-init.js";
+sliderInit();

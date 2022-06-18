@@ -30,7 +30,7 @@ body {
 
   color: black;
   background-color: #d4d4d4f6;
-  font: normal SansProRegular, sans-serif;
+  font-family: SansProRegular, sans-serif;
   color: $font-default;
 }
 .body-wrapper {
@@ -105,7 +105,7 @@ body {
   }
 }
 .main {
-  height: 100vh;
+  height: 100%;
 }
 .background-grayBLue {
   background-color: $second-main;
@@ -134,7 +134,7 @@ section {
   padding: 30px;
   font-size: 1.2rem;
   p {
-      text-align: center;
+    text-align: center;
   }
 }
 .title-of-list-sections {
@@ -202,39 +202,59 @@ section {
     margin-bottom: 48px;
   }
 }
-.valuations {
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  .valuation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
+ 
+  iframe {
+    width: 80%;
+    height: 600px;
+  }
+  img {
 
-    margin: 0 40px 28px 0;
-    word-wrap: break-word;
-    width: 30%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
-    .circle {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 75px;
-      height: 75px;
-      border-radius: 100%;
-      border: 1px solid $red;
-    }
-    h5 {
-      margin: 16px 0;
-    }
-    p {
-      text-align: center;
-    }
   }
 }
-.valuation:nth-child(3n) {
-  margin-right: 0;
+.valutations-wrapper {
+  margin-bottom: 310px;
 }
+
+.valuation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  word-wrap: break-word;
+
+
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    border: 1px solid $red;
+  }
+  h5 {
+    margin: 16px 0;
+  }
+  p {
+    text-align: center;
+  }
+}
+
 .cards-performance {
   display: flex;
   flex-wrap: wrap;
@@ -276,13 +296,73 @@ section {
       background-image: url("../img/icons-for-performanse-block/adaptation.png");
     }
     p {
-        text-align: center;
-        font-size: 1rem;
-
-        
+      text-align: center;
+      font-size: 1rem;
     }
   }
 }
 .card-performance:nth-child(2n) {
-    margin-right: 0;
+  margin-right: 0;
+}
+
+.background-red {
+  color: $white;
+  background-color: $red;
+}
+.display-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 48px;
+  font-size: 1.2rem;
+}
+.title-form {
+  margin: 0 150px 45px 0px;
+  p {
+    font-size: 1.5rem;
+  }
+}
+.ui-form {
+  input {
+    outline: none;
+    width: 100%;
+    padding: 0 10px;
+    line-height: 40px;
+    margin-bottom:24px ;
+    background: $white;
+    border-radius: 15px;
+    border: 2px solid $white;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+  }
+ input[type="submit"] {
+    width: 100%;
+    padding: 0;
+    line-height: 42px;
+    background: $white;
+    border-width: 0;
+    color: black;
+    font-size: 20px;
+ }
+ input[type="submit"]:focus {
+  background-color: rgb(248, 147, 147);
+ }
+ input[type="submit"]:hover {
+  background-color: rgb(248, 147, 147);
+ }
+ input[type="submit"]:active {
+  background-color: rgb(250, 121, 121);
+ }
+
+
+label {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+}
+footer {
+  display: flex;
+  height: 500px;
+  width: 100%;
 }
