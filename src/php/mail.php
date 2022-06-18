@@ -69,7 +69,7 @@ function mail_utf8($to, $from_user, $from_email,
           </body>
         </html>";
 
-        $to = 'serafimcomru91@gmail.com'; 
+         $to = 'karina.polonina@yandex.ru';
 
         $subject = 'Письмо с сайта по поиску менеджера';
         
