@@ -1,5 +1,20 @@
 import Swiper from "https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js";
 
+const changeSwiper = (swiper) => {
+  if (document.documentElement.clientWidth < 800 && document.documentElement.clientWidth > 500) {
+    swiper.params.slidesPerView = 2;
+    swiper.update();
+  } 
+  else if(document.documentElement.clientWidth <= 500)  {
+    swiper.params.slidesPerView = 1;
+    swiper.update();
+  }
+  else {
+    swiper.params.slidesPerView = 3;
+    swiper.update();
+  }
+ 
+}
 export default () => {
   new Swiper(".swiperProjects", {
     // Optional parameters
@@ -46,4 +61,9 @@ export default () => {
     },
    
   });
+  window.addEventListener('resize', (e)=> {
+    changeSwiper(swiper);
+  })
+  changeSwiper(swiper);
+  
 };

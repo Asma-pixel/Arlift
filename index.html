@@ -23,9 +23,10 @@
           />
           <nav class="menu">
             <ul>
-              <a href="#">О компании</a>
-              <a href="#">Описание вакансии</a>
-              <a href="#">Присоединиться</a>
+              <a href="#d-vacation">Описание вакансии</a>
+              <a href="#about-company">О компании</a>
+              <a href="#join-company">Присоединиться</a>
+              <a href="#">Меню</a>
             </ul>
           </nav>
         </div>
@@ -37,10 +38,10 @@
             <h3>Работа</h3>
           </div>
         </section>
-        <section class="title-of-list-sections">
+        <section id="d-vacation" class="title-of-list-sections">
           <h1>Описание вакансии</h1>
         </section>
-        <section class="requirements display-column">
+        <section class="requirements display-column background-white">
           <h2>Кто нам нужен</h2>
           <p>
             В нашу команду мы принимаем людей с высоким уровнем профессиональных
@@ -103,7 +104,7 @@
             </li>
           </ol>
         </section>
-        <section class="title-of-list-sections">
+        <section id= "about-company"class="title-of-list-sections">
           <h1>О компании</h1>
         </section>
         <section class="mission display-column background-grayBLue">
@@ -305,7 +306,7 @@
             </div>
           </div>
         </section>
-        <section class="join-section display-column background-white">
+        <section  class="join-section display-column background-white">
           <h2>Присоединяйтесь к команде Арлифт</h2>
           <p>
             Если вы смотрите на мир так же, как и мы, готовы развиваться и
@@ -313,53 +314,70 @@
             Становитесь командой Арлифт. Впереди много успешных проектов!
           </p>
         </section>
-        <div class="join-form display-row background-red">
-          <div class="title-form">
-            <h2>Заполните анкету</h2>
-            <p>
-              Пожалуйста будьте внимательны, заполняя строки email и телефон
-            </p>
-          </div>
-
-          <form action="./src/php/mail.php" class="ui-form" method="POST">
-            <div class="form-row">
-              <label for="name">Имя</label>
-              <input name="name" type="text" id="name" required />
+        <section id="join-company" class="join-form display-row background-red">
+          <div class="join-form-wrapper">
+            <div class="title-form">
+              <h2>Заполните анкету</h2>
+              <p>
+                Пожалуйста будьте внимательны, заполняя строки email и телефон
+              </p>
             </div>
-            <div class="form-row">
-              <label for="surname">Фамилия</label>
-              <input name = "surname" type="text" id="surname" required />
-            </div>
-            <div class="form-row">
-              <label for="patronymic">Отчечство</label>
-              <input name="patronymic" type="text" id="patronymic" required />
-            </div>
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input name="email" type="text" id="email" required />
-            </div>
-            <div class="form-row">
-              <label  for="phone_number">Номер телефона</label>
-              <input
-                name="number"
-                type="tel"
-                name="phone_number"
-                id="phone_number"
-                required
-                pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
-                placeholder="+7 (900) 123-45-67"
-              />
-            </div>
-            <div class="form-row">
-              <label for="date">Дата рождения</label>
-              <input name ="date" type="date" id="date" required />
-            </div>
-            <p><input type="submit" value="Отправить" /></p>
-          </form>
-        </div>
+            <form action="./src/php/mail.php" class="ui-form" method="POST">
+              <div class="form-row">
+                <label for="name">Имя</label>
+                <input name="name" type="text" id="name" required />
+              </div>
+              <div class="form-row">
+                <label for="surname">Фамилия</label>
+                <input name = "surname" type="text" id="surname" required />
+              </div>
+              <div class="form-row">
+                <label for="patronymic">Отчечство</label>
+                <input name="patronymic" type="text" id="patronymic" required />
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input name="email" type="text" id="email" required />
+              </div>
+              <div class="form-row">
+                <label  for="phone_number">Номер телефона</label>
+                <input
+                  name="number"
+                  type="tel"
+                  name="phone_number"
+                  id="phone_number"
+                  required
+                  pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                  placeholder="+7 (900) 123-45-67"
+                />
+              </div>
+              <div class="form-row">
+                <label for="date">Дата рождения</label>
+                <input name ="date" type="date" id="date" required />
+              </div>
+              <p><input type="submit" value="Отправить" /></p>
+            </form>
+          </div> 
+        </section>
       </main>
       <footer>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.282869053171!2d37.71058201623025!3d55.73621398054883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab54ae151a06b%3A0xaa5b46dea4139688!2z0YPQuy4g0KHQvNC40YDQvdC-0LLRgdC60LDRjywgMjUg0YHRgtGA0L7QtdC90LjQtSAxMCwg0JzQvtGB0LrQstCwLCAxMDkwNTI!5e0!3m2!1sru!2sru!4v1655234418350!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="footer-wrapper">
+          <div class="information-wrapper">
+            <a href="./index.html"><div class="arlift-logo"></div></a>
+            <h5>Вы можете позвонить нам: <a href="tel:88005551928" onclick="yaCounter18811624.reachGoal('tel_bespl_footer'); return true;">
+              8 800 555 19 28
+          </a> </h5>
+          
+          </div>
+         
+          <div class="map-wrapper">
+            <h4>Наш офис на карте</h4>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.282869053171!2d37.71058201623025!3d55.73621398054883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab54ae151a06b%3A0xaa5b46dea4139688!2z0YPQuy4g0KHQvNC40YDQvdC-0LLRgdC60LDRjywgMjUg0YHRgtGA0L7QtdC90LjQtSAxMCwg0JzQvtGB0LrQstCwLCAxMDkwNTI!5e0!3m2!1sru!2sru!4v1655234418350!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        
+
+        </div>
+      
       </footer>
     </div>
 
