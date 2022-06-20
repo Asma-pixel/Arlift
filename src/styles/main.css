@@ -100,7 +100,7 @@ a {
   display: flex;
 }
 
-.header-outer ul a {
+.header-outer a {
   text-decoration: none;
   font-size: 1.25rem;
   color: #230000;
@@ -109,24 +109,24 @@ a {
   font-weight: 500;
 }
 
-.header-outer ul a:first-child {
+.header-outer a:first-child {
   margin: 0;
 }
 
-.header-outer ul a:hover:after {
+.header-outer a:hover:after {
   -webkit-transform: scalex(1);
           transform: scalex(1);
 }
 
-.header-outer ul a:hover {
+.header-outer a:hover {
   color: #AE1613;
 }
 
-.header-outer ul a:active {
+.header-outer a:active {
   color: #AE1613;
 }
 
-.header-outer ul a::after {
+.header-outer a::after {
   -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
   content: "";
@@ -140,6 +140,10 @@ a {
   position: absolute;
   bottom: -2px;
   left: 0;
+}
+
+#menu {
+  display: none;
 }
 
 .main {
@@ -564,12 +568,6 @@ footer .footer-wrapper a {
   color: white;
 }
 
-@media (min-width: 700px) {
-  a:last-child {
-    display: none;
-  }
-}
-
 @media (max-width: 900px) {
   .body-wrapper {
     width: 100%;
@@ -607,11 +605,44 @@ footer .footer-wrapper a {
     padding: 30px 10px;
     font-size: 1rem;
   }
-  .header-outer a {
+  .header-outer .menu a {
     display: none;
   }
-  .header-outer a:last-child {
-    display: block;
+  .header-outer .menu-active {
+    position: relative;
+  }
+  .header-outer .menu-active ul {
+    position: absolute;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    top: 25px;
+    left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: white;
+  }
+  .header-outer .menu-active ul a {
+    text-align: center;
+    display: inline;
+    margin: 12px;
+    word-break: none;
+  }
+  #menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .join-form-wrapper {
     width: 100%;

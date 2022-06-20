@@ -70,44 +70,48 @@ a {
 
   ul {
     display: flex;
-
-    a {
-      text-decoration: none;
-      font-size: 1.25rem;
-      color: $font-default;
-      margin-left: 1.75rem;
-      position: relative;
-      font-weight: 500;
-    }
-    a:first-child {
-      margin: 0;
-    }
+  
    
-
-    a:hover:after {
-      transform: scalex(1);
-    }
-    a:hover {
-      color: $red;
-    }
-    a:active {
-      color: $red;
-    }
-    a::after {
-      transition: 0.25s ease;
-      content: "";
-      color: $red;
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: $red;
-      transform: scalex(0);
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-    }
     
   }
+  a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: $font-default;
+    margin-left: 1.75rem;
+    position: relative;
+    font-weight: 500;
+  }
+  a:first-child {
+    margin: 0;
+  }
+ 
+
+  a:hover:after {
+    transform: scalex(1);
+  }
+  a:hover {
+    color: $red;
+  }
+  a:active {
+    color: $red;
+  }
+  a::after {
+    transition: 0.25s ease;
+    content: "";
+    color: $red;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $red;
+    transform: scalex(0);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+  }
+}
+#menu {
+  display: none;
 }
 .main {
   height: 100%;
@@ -424,11 +428,8 @@ footer {
   }
  
 }
-@media (min-width: 700px) { 
-  a:last-child {
-    display: none;
-  }
-}
+
+
 @media (max-width: 900px) {
   .body-wrapper {
     width: 100%;
@@ -464,12 +465,36 @@ footer {
     font-size: 1rem;
   }
   .header-outer {
-    a {
-      display: none;
+    .menu {
+      a {
+        display: none;
+      }
     }
-    a:last-child {
-      display: block;
+    .menu-active {
+      position: relative;
+     
+      ul {
+        position: absolute;
+        width: max-content;
+        top: 25px;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        a {
+          text-align: center;
+          display: inline;
+          margin: 12px;
+          word-break: none;
+        }
+      }
+     
     }
+  }
+  #menu {
+    display: flex;
   }
   .join-form-wrapper {
     width: 100%;
@@ -484,10 +509,6 @@ footer {
   .section-with-list {
     ol {
       width: 95%;
-    }
-    li {
-  
-     
     }
   }
 }

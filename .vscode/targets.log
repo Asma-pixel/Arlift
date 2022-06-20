@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jun 19 17:52:39 2022
+# Make data base, printed on Mon Jun 20 19:51:43 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-024b8c26-f53a-4142-8a52-5422658f4c14.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-17219d4f-71e4-4947-ae33-528ea8e3357c.sock
 # environment
 VSCODE_CWD = /home/seraphim/www/arlift
 # default
@@ -59,13 +59,13 @@ VSCODE_CODE_CACHE_PATH = /home/seraphim/.config/Code/CachedData/30d9c6cd9483b2cc
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.O1GZN1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.RB5JO1
 # default
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.205
+GNOME_TERMINAL_SERVICE = :1.163
 # makefile
 MAKEFLAGS = pqrR
 # makefile
@@ -101,13 +101,13 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 9493
+VSCODE_PID = 19319
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/arlift.com:@/tmp/.ICE-unix/1584,unix/arlift.com:/tmp/.ICE-unix/1584
+SESSION_MANAGER = local/arlift.com:@/tmp/.ICE-unix/1541,unix/arlift.com:/tmp/.ICE-unix/1541
 # automatic
 *F = $(notdir $*)
 # environment
@@ -131,7 +131,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/68437f78_47e1_40c5_a24f_6b7059a07310
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/b8eefa62_ca1e_4845_bd5e_403018e5e5d7
 # environment
 MAKELEVEL := 0
 # default
@@ -181,7 +181,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := lint
 # environment
-SYSTEMD_EXEC_PID = 1615
+SYSTEMD_EXEC_PID = 1576
 # environment
 DISPLAY = :0
 # environment
@@ -257,9 +257,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 2052, inode 9704083): 15 files, no impossibilities.
+# . (device 2052, inode 9704083): 16 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -278,6 +278,7 @@ lint:
 Makefile:
 #  Implicit rule search has been done.
 #  Last modified 2022-06-04 23:09:15.363852
+ 
 #  File has been updated.
 #  Successfully updated.
 
@@ -295,7 +296,6 @@ all:
 #  File has not been updated.
 
 # files hash-table stats:
- 
 # Load=5/1024=0%, Rehash=0, Collisions=0/15=0%
 # VPATH Search Paths
 
@@ -303,12 +303,12 @@ all:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 21 / storage = 203 B / avg = 9 B
-# current buf: size = 8162 B / used = 203 B / count = 21 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 222 B / avg = 10 B
+# current buf: size = 8162 B / used = 222 B / count = 22 / avg = 10 B
 
-# strcache performance: lookups = 26 / hit rate = 19%
+# strcache performance: lookups = 27 / hit rate = 18%
 # hash-table stats:
-# Load=21/8192=0%, Rehash=0, Collisions=0/26=0%
-# Finished Make data base on Sun Jun 19 17:52:39 2022
+# Load=22/8192=0%, Rehash=0, Collisions=0/27=0%
+# Finished Make data base on Mon Jun 20 19:51:43 2022
 
  
