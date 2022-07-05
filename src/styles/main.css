@@ -497,6 +497,60 @@ section h2 {
   font-size: 20px;
 }
 
+.ui-form .upload-file__wrapper {
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.ui-form .upload-file__input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+  height: 0.4px;
+}
+
+.ui-form .upload-file__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px dashed #FFFF;
+  padding: 9px 49px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.ui-form .upload-file__icon {
+  width: 30px;
+  height: auto;
+  margin-right: 11px;
+  fill: #ffff;
+}
+
+.ui-form .upload-file__label .upload-file__text,
+.ui-form .upload-file__label .upload-file__icon path {
+  -webkit-transition: .25s ease;
+  transition: .25s ease;
+}
+
+.ui-form .upload-file__label:hover .upload-file__text {
+  color: #f89393;
+}
+
+.ui-form .upload-file__label:hover .upload-file__icon path {
+  fill: #f89393;
+}
+
+.ui-form .upload-file__label:hover {
+  border: 2px dashed #f89393;
+}
+
 .ui-form input[type="submit"]:focus {
   background-color: #f89393;
 }
@@ -617,7 +671,7 @@ footer .footer-wrapper a {
     width: -moz-max-content;
     width: max-content;
     top: 25px;
-    left: 20px;
+    left: -100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

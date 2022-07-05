@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 20 19:51:43 2022
+# Make data base, printed on Tue Jun 21 21:05:02 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-17219d4f-71e4-4947-ae33-528ea8e3357c.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-99b9a05b-9855-486c-ba53-f009b50cd32e.sock
 # environment
 VSCODE_CWD = /home/seraphim/www/arlift
 # default
@@ -59,13 +59,13 @@ VSCODE_CODE_CACHE_PATH = /home/seraphim/.config/Code/CachedData/30d9c6cd9483b2cc
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.RB5JO1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.JRZNO1
 # default
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.163
+GNOME_TERMINAL_SERVICE = :1.176
 # makefile
 MAKEFLAGS = pqrR
 # makefile
@@ -101,13 +101,13 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 19319
+VSCODE_PID = 6820
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/arlift.com:@/tmp/.ICE-unix/1541,unix/arlift.com:/tmp/.ICE-unix/1541
+SESSION_MANAGER = local/arlift.com:@/tmp/.ICE-unix/1499,unix/arlift.com:/tmp/.ICE-unix/1499
 # automatic
 *F = $(notdir $*)
 # environment
@@ -131,7 +131,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/b8eefa62_ca1e_4845_bd5e_403018e5e5d7
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/6baaa17b_63df_45d0_a9b9_dfbab4cfbad6
 # environment
 MAKELEVEL := 0
 # default
@@ -181,7 +181,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := lint
 # environment
-SYSTEMD_EXEC_PID = 1576
+SYSTEMD_EXEC_PID = 1526
 # environment
 DISPLAY = :0
 # environment
@@ -309,6 +309,6 @@ all:
 # strcache performance: lookups = 27 / hit rate = 18%
 # hash-table stats:
 # Load=22/8192=0%, Rehash=0, Collisions=0/27=0%
-# Finished Make data base on Mon Jun 20 19:51:43 2022
+# Finished Make data base on Tue Jun 21 21:05:02 2022
 
  

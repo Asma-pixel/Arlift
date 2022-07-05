@@ -7,7 +7,7 @@ export default () => {
     const scrollTarget = document.querySelector(id);
 
     const topOffset = 50;
-    // const topOffset = 0; // если не нужен отступ сверху 
+  
     const elementPosition = scrollTarget.getBoundingClientRect().top;
     const offsetPosition = elementPosition - topOffset;
 
