@@ -324,7 +324,7 @@
                 Пожалуйста будьте внимательны, заполняя строки email и телефон
               </p>
             </div>
-            <form class="ui-form" method="POST">
+            <form class="ui-form">
               <div class="form-row">
                 <label for="name">Имя</label>
                 <input name="name" type="text" id="name" required />
@@ -341,6 +341,7 @@
                 <input
                     type="file"
                     name="files[]"
+                    multiple
                     id="upload-file__input_1"
                     class="upload-file__input"
                     accept=".doc, .docx, .pdf"
@@ -373,7 +374,7 @@
                 <label for="date">Дата рождения</label>
                 <input name ="date" type="date" id="date" required />
               </div>
-              <input type="submit" value="Отправить" />
+              <input id="sendBtn" type="submit" value="Отправить" />
             </form>
           </div> 
         </section>

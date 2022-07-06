@@ -1,96 +1,69 @@
 
 export default () => {
-  document.addEventListener("DOMContentLoaded", () => {
 
-    const forms = document.querySelectorAll("form");
-    const inputFile = document.querySelectorAll(".upload-file__input");
-  
-    /////////// Кнопка «Прикрепить файл» ///////////
-    inputFile.forEach(function(el) {
-        let textSelector = document.querySelector(".upload-file__text");
-        let fileList;
-  
-        // Событие выбора файла(ов)
-        el.addEventListener("change", function (e) {
-  
-            // создаём массив файлов
-            fileList = [];
-            for (let i = 0; i < el.files.length; i++) {
-                fileList.push(el.files[i]);
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const form = document.querySelector("form");
+        const inputFile = document.getElementById("upload-file__input_1");
+    
+    
+            let textSelector = document.querySelector(".upload-file__text");
+    
+            // Событие выбора файла(ов)
+            inputFile.addEventListener('change', ()=> {
+                uploadFile(inputFile.files[0]);
+            })
+    
+            // Проверяем размер файлов и выводим название
+            const uploadFile = (file) => {
+                // файла <5 Мб
+                if (file.size > 5 * 1024 * 1024) {
+                    alert("Файл должен быть не более 5 МБ.");
+                    return;
+                }
+    
+                // Показ загружаемых файлов
+                 textSelector.textContent = file.name;
+                
+                
             }
-  
-            // вызов функции для каждого файла
-            fileList.forEach(file => {
-                uploadFile(file);
-            });
+    
+        function send(event, php){
+                let btn = document.getElementById('sendBtn');
+                btn.value = "Мы отправляем ваше сообщение";
+                event.preventDefault ? event.preventDefault() : event.returnValue = false;
+                var req = new XMLHttpRequest();
+                req.open('POST', php, true);
+                req.onload = function() {
+                    if (req.status >= 200 && req.status < 400) {
+                    let json = JSON.parse(this.response); 
+                      
+                        
+                        // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+                        if (json.result == "success") {
+                            // Если сообщение отправлено
+                            btn.value = "Успех!";
+                            
+                        } else {
+                            // Если произошла ошибка
+                             btn.value = "Неудача!";
+                        }
+                    // Если не удалось связаться с php файлом
+                    } else {alert("Ошибка сервера. Номер: "+req.status);}}; 
+                
+                // Если не удалось отправить запрос. Стоит блок на хостинге
+                req.onerror = function() {alert("Ошибка отправки запроса");};
+                req.send(new FormData(event.target));
+         }
+        // Отправка формы на сервер
+ 
+        form.addEventListener('submit', (e) => {
+            send(e,"../src/php/mail.php" )
+   
         });
-  
-        // Проверяем размер файлов и выводим название
-        const uploadFile = (file) => {
-  
-            // файла <5 Мб
-            if (file.size > 5 * 1024 * 1024) {
-                alert("Файл должен быть не более 5 МБ.");
-                return;
-            }
-  
-            // Показ загружаемых файлов
-            if (file && file.length > 1) {
-                if ( file.length <= 4 ) {
-                    textSelector.textContent = `Выбрано ${file.length} файла`;
-                }
-                if ( file.length > 4 ) {
-                    textSelector.textContent = `Выбрано ${file.length} файлов`;
-                }
-            } else {
-                textSelector.textContent = file.name;
-            }
-        }
-  
+    
     });
-  
-    // Отправка формы на сервер
-    const postData = async (url, fData) => { // имеет асинхронные операции
-  
-        // начало отправки
-        // здесь можно оповестить пользователя о начале отправки
-        // ждём ответ, только тогда наш код пойдёт дальше
-        let fetchResponse = await fetch(url, {
-            method: "POST",
-            body: fData
-        });
-  
-        // ждём окончания операции
-        return await fetchResponse.text();
-    };
-    if (forms) {
-        forms.forEach(el => {
-            el.addEventListener("submit", function (e) {
-                e.preventDefault();
-  
-                // создание объекта FormData
-                let fData = new FormData(this);
-  
-                // Добавление файлов input type file
-                let file = el.querySelector(".upload-file__input");
-                for (let i = 0; i < (file.files.length); i++) {
-                    fData.append("files[]", file.files[i]); // добавляем файлы в объект FormData()
-                }
-  
-                // Отправка на сервер
-                postData("../php/mail.php", fData)
-                    .then(fetchResponse => {
-                        console.log("Данные успешно отправлены!");
-                        console.log(fetchResponse);
-                    })
-                    .catch(function (error) {
-                        console.log("Ошибка!");
-                        console.log(error);
-                    });
-            });
-        });
-    };
-  
-  });
-  
+
+
+
 }

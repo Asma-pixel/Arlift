@@ -551,10 +551,6 @@ section h2 {
   border: 2px dashed #f89393;
 }
 
-.ui-form input[type="submit"]:focus {
-  background-color: #f89393;
-}
-
 .ui-form input[type="submit"]:hover {
   background-color: #f89393;
 }
